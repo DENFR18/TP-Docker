@@ -1,0 +1,18 @@
+version: '3'
+services:
+  web:
+    build: .             # Construit à partir du Dockerfile courant
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redis            # Attend que redis soit prêt
+    networks:
+      - mon-net          # Utilise un réseau commun
+
+  redis:
+    image: redis:latest
+    networks:
+      - mon-net
+
+networks:
+  mon-net:

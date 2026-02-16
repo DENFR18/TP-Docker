@@ -1,0 +1,12 @@
+# Ignorer le dossier de configuration de Vagrant (contient l'état de la VM)
+.vagrant/
+
+# Ignorer les dépendances Node si vous avez fait un npm install en local
+node_modules/
+
+# Ignorer les fichiers systèmes
+.DS_Store
+Thumbs.db
+
+# Ignorer les volumes de données (pour ne pas upload la base de données WordPress)
+wordpress_tp/db_data/
